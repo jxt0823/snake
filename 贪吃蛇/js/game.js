@@ -613,6 +613,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         //初始化游戏元素
         initSnake();
+        // 在 game.js 中找到调用 initAISnake 的位置（约617行），修改为：
+       if(game.selectedMode==='ai'){
+         initAISnake([[5, 5], [4, 5], [3, 5]]); }
         generateObstacles();
         // 加载最高分
         loadHighScore();
@@ -623,6 +626,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 显示开始提示
         document.getElementById('gameStartTip').style.display = 'block';
     }
+
     // 加载问题数据
     async function loadQuestions() {
         try {
@@ -1078,6 +1082,8 @@ document.addEventListener('DOMContentLoaded', function() {
         //根据缩放比例计算实际地图的长宽
         game.mapWidth = game.canvas.width * game.mapScale;
         game.mapHeight = game.canvas.height * game.mapScale;
+         console.log("画布中心:", game.canvas.width / 2, game.canvas.height / 2);      
+       
         //设置初始视口位置
         if(game.isMapFixed){
             game.viewOffsetX = 0;
@@ -1700,7 +1706,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const centerX = game.canvas.width / 2;
         const centerY = game.canvas.height / 2;
         const radius = Math.max(game.canvas.width, game.canvas.height) * 0.6;
-        
         // 绘制灯光扇形
         ctx.save();
         
@@ -1836,10 +1841,22 @@ document.addEventListener('DOMContentLoaded', function() {
             );
         } 
     }
+
     function drawGameElements(){
         drawObstacles();//绘制障碍物
         drawFood();//绘制食物
         drawSnake();//绘制蛇
+        if (game.selectedMode === 'ai' && typeof drawAISnake === 'function') {
+        // 传入必要的绘制参数
+        drawAISnake(
+            game.ctx, 
+            game.viewOffsetX,  // 视口X偏移（对应camX）
+            game.viewOffsetY,  // 视口Y偏移（对应camY）
+            config.gridSize,   // 网格大小（GRID）
+            2                  // 单元格内边距（CELL_PAD，与玩家蛇保持一致）
+        );
+    }
+        
         //恢复画布状态（消除绘制地图图片时对画布上下文的影响）
         if(game.mapImage&&game.mapImage.complete){
             game.ctx.restore();
@@ -2302,6 +2319,9 @@ function setupEventListeners() {
         document.getElementById('modalOverlay').style.display = 'none';
         // 重新初始化游戏元素
         initSnake();
+        if(game.selectedMode==='ai'){
+       initAISnake([[5, 5], [4, 5], [3, 5]]); }
+             
         generateObstacles();
         generateFood();
         // 重置UI
@@ -2363,8 +2383,19 @@ function setupEventListeners() {
         // 更新蛇的移动
         if (deltaTime >= game.speed) {
             updateGame();
-            game.lastUpdateTime = currentTime;
+         // 在gameLoop的更新阶段添加
+if (game.selectedMode === 'ai') {
+    const gridWidth = Math.floor(game.mapWidth / config.gridSize);
+    const gridHeight = Math.floor(game.mapHeight / config.gridSize);
+    updateAISnake(); // 更新方向
+    moveAISnake(game.obstacles, gridWidth, gridHeight); // 移动AI蛇
+}
+
+
+        game.lastUpdateTime = currentTime;
+        
         }
+            
         // 绘制游戏
         drawGame();
         // 继续游戏循环
