@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>贪吃喵大冒险--游戏界面</title>
+        <link rel="stylesheet" href="../css/game.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="game-container">
+            <!-- 游戏主区域 -->
+            <div class="game-area">
+                <!-- 游戏画布 -->
+                <canvas id="gameCanvas"></canvas>
+                
+                <!-- 游戏状态显示 -->
+                <div class="game-status" id="gameStatus">
+                    <!-- 倒计时显示 -->
+                    <div class="timer-display" id="timerDisplay">
+                        <i class="fas fa-clock"></i> <span id="timer">00:00</span>
+                    </div>
+                    
+                    <!-- 得分显示 -->
+                    <div class="score-display">
+                        <i class="fas fa-star"></i> 得分: <span id="currentScore">0</span>
+                    </div>
+                    
+                    <!-- 长度显示 -->
+                    <div class="length-display">
+                        <i class="fas fa-expand-alt"></i> 长度: <span id="snakeLength">5</span>
+                    </div>
+                </div>
+                
+                <!-- 游戏开始提示 -->
+                <div class="game-start-tip" id="gameStartTip">
+                    <h3>Are you ready？</h3>
+                    <img src="../assets/gameStart.jpeg" alt="游戏开始">
+                </div>
+                
+                <!-- 游戏结束弹窗 -->
+                <div class="game-over-modal" id="gameOverModal">
+                    <div class="modal-content">
+                        <h2 id="gameResult">游戏结束</h2>
+                        <div class="result-stats">
+                            <p><i class="fas fa-clock"></i> 游戏时间: <span id="finalTime">00:00</span></p>
+                            <p><i class="fas fa-star"></i> 最终得分: <span id="finalScore">0</span></p>
+                            <p><i class="fas fa-expand-alt"></i> 最终长度: <span id="finalLength">5</span></p>
+                            <p><i class="fas fa-trophy"></i> 最高记录: <span id="highScore">0</span></p>
+                        </div>
+                        <div class="result-buttons">
+                            <button id="restartFromEnd">重新开始</button>
+                            <button id="backToStart">返回开始界面</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="revive-modal" id="reviveModal">
+                    <div class="revive-content">
+                        <h2><i class="fas fa-heart"></i> 使用复活技能</h2>
+                        <p>你还有一次复活机会，是否立即复活继续游戏？</p>
+                        <div class="revive-buttons">
+                            <button id="confirmRevive">
+                                <i class="fas fa-check"></i> 确定复活
+                            </button>
+                            <button id="cancelRevive">
+                                <i class="fas fa-times"></i> 放弃复活
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-overlay" id="modalOverlay"></div>
+            </div>
+            
+            <!-- 游戏右侧控制面板 -->
+            <div class="game-right">
+                <!-- 猫咪信息 -->
+                <div class="cat-info">
+                    <h3><i class="fas fa-cat"></i> 当前猫猫</h3>
+                    <div class="cat-image-container">
+                        <img id="selectedCatImage" src="" alt="猫咪图片">
+                    </div>
+                    <div class="cat-name" id="catName">敏捷猫猫</div>
+                    <div class="cat-ability" id="catAbility">移动速度+5%</div>
+                    
+                    <!-- 特殊状态显示 -->
+                    <div class="special-status">
+                        <div class="status-item" id="defenseStatus">
+                            <i class="fas fa-shield-alt"></i> 防御生效
+                        </div>
+                        <div class="status-item" id="luckStatus">
+                            <i class="fas fa-clover"></i> 剩余复活次数: <span id="reviveCount">0</span>
+                        </div>
+                        <div class="status-item" id="magicStatus">
+                            <i class="fas fa-hat-wizard"></i> 魔法生效
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 分数和记录 -->
+                <div class="score-info">
+                    <div class="score-item">
+                        <h4><i class="fas fa-trophy"></i> 最高分</h4>
+                        <div class="score-value" id="highScoreDisplay">0</div>
+                    </div>
+                    <div class="score-item">
+                        <h4><i class="fas fa-star"></i> 当前分数</h4>
+                        <div class="score-value" id="currentScoreDisplay">0</div>
+                    </div>
+                </div>
+                
+                <!-- 模式信息 -->
+                <div class="mode-info">
+                    <h4><i class="fas fa-gamepad"></i> 游戏模式</h4>
+                    <div class="mode-value" id="gameModeDisplay">无限模式</div>
+                    
+                    <!-- 限时模式目标 -->
+                    <div class="time-target" id="timeTargetContainer">
+                        <p><i class="fas fa-bullseye"></i> 目标分数: <span id="targetScore">100</span></p>
+                        <p><i class="fas fa-hourglass-half"></i> 剩余时间: <span id="remainingTime">03:00</span></p>
+                    </div>
+                    
+                    <!-- 地图信息 -->
+                    <div class="map-info">
+                        <h4><i class="fas fa-map"></i> 当前地图</h4>
+                        <div class="map-value" id="currentMap">教室</div>
+                    </div>
+                </div>
+                
+                <!-- 题目区域（教室地图） -->
+                <div class="question-area" id="questionArea">
+                    <h4><i class="fas fa-question-circle"></i> 当前题目</h4>
+                    <div class="question-text" id="questionText">等待题目加载...</div>
+                    <div class="answer-hint">
+                        <p><i class="fas fa-lightbulb"></i> 吃掉正确答案进入下一题</p>
+                        <p><i class="fas fa-ruler"></i> 果实长度取决于答案文字长度</p>
+                    </div>
+                </div>
+                
+                <!-- 游戏控制按钮 -->
+                <div class="game-buttons">
+                    <button id="start-btn">
+                        <i class="fas fa-play"></i> 开始游戏
+                    </button>
+                    <button id="pause-btn" disabled>
+                        <i class="fas fa-pause"></i> 暂停游戏
+                    </button>
+                    <button id="restart-btn">
+                        <i class="fas fa-redo"></i> 重新开始
+                    </button>
+                    <button id="back-btn">
+                        <i class="fas fa-home"></i> 返回首页
+                    </button>
+                </div>
+                
+                <!-- 游戏说明 -->
+                <div class="game-instructions">
+                    <h4><i class="fas fa-info-circle"></i> 游戏说明</h4>
+                    <ul>
+                        <li>使用方向键或WASD控制猫咪移动</li>
+                        <li>空格键开始</li>
+                        <li>教室模式：找出正确答案</li>
+                        <li>图书馆模式：书籍=好果，食物=坏果</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <script src="../js/game.js"></script>
+    </body>
+</html>

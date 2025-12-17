@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="gbk">  <!-- 改为UTF-8避免中文乱码 -->
+<title>贪吃喵大作战！</title>
+
+<style>
+body {
+    background: #111;
+    color: #eee;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+#gameContainer {
+    width: 800px;
+    height: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #555;
+    position: relative;
+}
+canvas {
+    background: #222;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+button {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #444;
+    color: #eee;
+    border: 1px solid #666;
+    border-radius: 4px;
+}
+button:hover {
+    background: #555;
+}
+#debugPanel {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    max-width: 300px;
+    display: none;
+    border: 1px solid #666;
+}
+.debug-item {
+    margin: 5px 0;
+}
+#score {
+    font-size: 20px;
+    color: #FFC107;
+}
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: red;
+    text-shadow: 2px 2px 4px #000;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>贪吃喵大作战</h1>
+<div>分数：<span id="score">0</span></div>
+<button onclick="resetGame()">重新开始</button>
+<button onclick="toggleDebug()">调试面板</button>
+
+<select id="aiMode" onchange="changeAIMode()">
+    <option value="A_STAR">A* 算法</option>
+    <option value="GREEDY">贪婪算法</option>
+    <option value="BFS">BFS</option>
+    <option value="DFS">DFS</option>
+</select>
+
+<div id="gameContainer">
+    <canvas id="game" width="2000" height="2000"></canvas>
+    <div class="game-over" id="gameOverText">游戏结束！</div>
+</div>
+
+<div id="debugPanel">
+    <h3>调试信息</h3>
+    <div class="debug-item">玩家蛇长度: <span id="debugPlayerLen">0</span></div>
+    <div class="debug-item">AI蛇长度: <span id="debugAiLen">0</span></div>
+    <div class="debug-item">AI蛇位置: <span id="debugAiPos">[]</span></div>
+    <div class="debug-item">玩家位置: <span id="debugPlayerPos">[]</span></div>
+    <div class="debug-item">食物位置: <span id="debugFoodPos">[]</span></div>
+    <div class="debug-item">摄像机: <span id="debugCam">(0,0)</span></div>
+    <div class="debug-item">WS状态: <span id="debugWs">未连接</span></div>
+    <div class="debug-item">当前方向: <span id="debugDir">RIGHT</span></div>
+    <div class="debug-item">游戏状态: <span id="debugGameOver">运行中</span></div>
+</div>
+
+<script>
+console.log("? script 执行了");
+
+// ===== 全局错误捕获 =====
+window.addEventListener('error', e => {
+    console.error('全局错误:', e.message);
+});
+window.addEventListener('unhandledrejection', e => {
+    console.error('Promise 错误:', e.reason);
+});
+
+// ===== DOM =====
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+const container = document.getElementById("gameContainer");
+const scoreEl = document.getElementById("score");
+const aiModeSelect = document.getElementById("aiMode");
+const debugPanel = document.getElementById("debugPanel");
+const gameOverText = document.getElementById("gameOverText");
+
+// ===== 参数 =====
+const GRID = 32;
+const CELL_PAD = 2;
+const CAM_SPEED = 0.15;
+
+// ===== 状态 =====
+let snake = [];
+let ai_snake = [];
+let food = null;
+let obstacles = [];
+let camX = 0, camY = 0;
+let camInit = false;
+let ws = null;
+let wsReady = false;
+let gameOver = false;
+let currentDir = "RIGHT";
+let debugVisible = false;
+
+// ===== 猫头图片 =====
+const headImg = new Image();
+headImg.src = "./yellow.png"; // 确保图片路径正确
+let imgLoaded = false;
+
+headImg.onload = () => {
+    imgLoaded = true;
+    console.log("? 猫头图片加载完成");
+};
+headImg.onerror = () => {
+    console.error("? 猫头图片加载失败，将使用替代图形");
+    imgLoaded = true; // 即使加载失败也继续渲染
+};
+
+// ===== 工具函数 =====
+function dirToAngle(dir) {
+    // 修复旋转角度，确保猫头朝向正确
+    if (dir === "UP") return -Math.PI/2;
+    if (dir === "DOWN") return Math.PI/2;
+    if (dir === "LEFT") return Math.PI;
+    return 0; // RIGHT
+}
+
+function drawRoundedRect(x,y,w,h,r) {
+    ctx.beginPath();
+    ctx.moveTo(x+r,y);
+    ctx.arcTo(x+w,y,x+w,y+h,r);
+    ctx.arcTo(x+w,y+h,x,y+h,r);
+    ctx.arcTo(x,y+h,x,y,r);
+    ctx.arcTo(x,y,x+w,y,r);
+    ctx.closePath();
+    ctx.fill();
+}
+
+// ===== WebSocket =====
+function connect() {
+    console.log("尝试连接 WS");
+    // 关闭现有连接
+    if (ws) {
+        ws.close();
+    }
+    
+    ws = new WebSocket("ws://127.0.0.1:8000/ws");
+    updateDebugInfo("WS状态", "连接中...");
+
+    ws.onopen = () => {
+        wsReady = true;
+        updateDebugInfo("WS状态", "已连接");
+        console.log("? WS 已连接");
+        ws.send("RIGHT");
+    };
+
+    ws.onmessage = e => {
+        try {
+            console.log("? WS 原始数据:", e.data);
+            const d = JSON.parse(e.data);
+
+            snake = d.snake ?? snake;
+            ai_snake = d.ai_snake ?? ai_snake;
+            food = d.food ?? food;
+            obstacles = d.obstacles ?? obstacles;
+            gameOver = d.game_over ?? gameOver;
+            scoreEl.textContent = d.score ?? 0;
+
+            // 更新游戏结束显示
+            gameOverText.style.display = gameOver ? "block" : "none";
+            
+            console.log("? 玩家蛇:", snake);
+            console.log("? AI蛇:", ai_snake);
+
+            if (!camInit && snake.length) {
+                camX = snake[0][0]*GRID - container.clientWidth/2;
+                camY = snake[0][1]*GRID - container.clientHeight/2;
+                camInit = true;
+            }
+
+            // 更新调试信息
+            updateDebugInfo("玩家蛇长度", snake.length);
+            updateDebugInfo("AI蛇长度", ai_snake.length);
+            updateDebugInfo("AI蛇位置", JSON.stringify(ai_snake));
+            updateDebugInfo("玩家位置", JSON.stringify(snake[0]));
+            updateDebugInfo("食物位置", JSON.stringify(food));
+            updateDebugInfo("当前方向", currentDir);
+            updateDebugInfo("游戏状态", gameOver ? "游戏结束" : "运行中");
+            
+        } catch (err) {
+            console.error("解析WS数据失败:", err);
+        }
+    };
+
+    ws.onclose = () => {
+        wsReady = false;
+        updateDebugInfo("WS状态", "断开");
+        console.log("? WS 断开，重连中");
+        gameOverText.style.display = "none";
+        setTimeout(connect, 3000);
+    };
+
+    ws.onerror = (err) => {
+        console.error("WS错误:", err);
+        updateDebugInfo("WS状态", "错误");
+    };
+}
+
+// ===== 绘制 =====
+function draw() {
+    // 清除画布
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if (!wsReady || !snake.length) {
+        requestAnimationFrame(draw);
+        return;
+    }
+
+    // 摄像机跟随玩家蛇头
+    const [hx, hy] = snake[0];
+    camX += ((hx*GRID - container.clientWidth/2) - camX) * CAM_SPEED;
+    camY += ((hy*GRID - container.clientHeight/2) - camY) * CAM_SPEED;
+
+    updateDebugInfo("摄像机", `(${Math.round(camX)},${Math.round(camY)})`);
+
+    // 绘制网格背景（可选，便于调试边界）
+    ctx.strokeStyle = "rgba(255,255,255,0.05)";
+    ctx.lineWidth = 1;
+    for (let x = 0; x < canvas.width; x += GRID) {
+        ctx.beginPath();
+        ctx.moveTo(x - camX % GRID, 0);
+        ctx.lineTo(x - camX % GRID, canvas.height);
+        ctx.stroke();
+    }
+    for (let y = 0; y < canvas.height; y += GRID) {
+        ctx.beginPath();
+        ctx.moveTo(0, y - camY % GRID);
+        ctx.lineTo(canvas.width, y - camY % GRID);
+        ctx.stroke();
+    }
+
+    // 绘制障碍
+    ctx.fillStyle = "#666";
+    obstacles.forEach(([x, y]) => {
+        drawRoundedRect(
+            x*GRID - camX, 
+            y*GRID - camY, 
+            GRID - CELL_PAD, 
+            GRID - CELL_PAD, 
+            4
+        );
+    });
+
+    // 绘制食物
+    if (food) {
+        ctx.fillStyle = "red";
+        drawRoundedRect(
+            food[0]*GRID - camX, 
+            food[1]*GRID - camY, 
+            GRID - CELL_PAD, 
+            GRID - CELL_PAD, 
+            6
+        );
+    }
+
+    // 绘制AI蛇
+    ai_snake.forEach(([x, y], i) => {
+        ctx.fillStyle = i === 0 ? "#00FF00" : "#4CAF50";
+        drawRoundedRect(
+            x*GRID - camX, 
+            y*GRID - camY, 
+            GRID - CELL_PAD, 
+            GRID - CELL_PAD, 
+            6
+        );
+    });
+
+    // 绘制玩家蛇身
+    ctx.fillStyle = "#FFC107";
+    snake.slice(1).forEach(([x, y]) => {
+        drawRoundedRect(
+            x*GRID - camX, 
+            y*GRID - camY, 
+            GRID - CELL_PAD, 
+            GRID - CELL_PAD, 
+            6
+        );
+    });
+
+    // 绘制玩家猫头
+    if (snake.length > 0) {
+        const [hx, hy] = snake[0];
+        ctx.save();
+        ctx.translate(
+            hx*GRID - camX + GRID/2, 
+            hy*GRID - camY + GRID/2
+        );
+        ctx.rotate(dirToAngle(currentDir));
+        
+        if (imgLoaded && headImg.complete) {
+            // 绘制猫头图片
+            ctx.drawImage(
+                headImg,
+                -GRID*0.75, 
+                -GRID*0.75, 
+                GRID*1.5, 
+                GRID*1.5
+            );
+        } else {
+            // 图片加载失败时绘制替代图形
+            ctx.fillStyle = "#FFC107";
+            drawRoundedRect(-GRID/2, -GRID/2, GRID, GRID, 10);
+            // 绘制眼睛
+            ctx.fillStyle = "black";
+            ctx.beginPath();
+            ctx.arc(-GRID/6, -GRID/6, GRID/12, 0, Math.PI*2);
+            ctx.arc(GRID/6, -GRID/6, GRID/12, 0, Math.PI*2);
+            ctx.fill();
+        }
+        
+        ctx.restore();
+    }
+
+    requestAnimationFrame(draw);
+}
+
+// ===== 调试函数 =====
+function toggleDebug() {
+    debugVisible = !debugVisible;
+    debugPanel.style.display = debugVisible ? "block" : "none";
+}
+
+function updateDebugInfo(name, value) {
+    const el = document.getElementById("debug" + name.replace(/\s/g, ""));
+    if (el) el.textContent = value;
+}
+
+// ===== 控制函数 =====
+document.addEventListener("keydown", e => {
+    const keyMap = {
+        ArrowUp: "UP",
+        ArrowDown: "DOWN",
+        ArrowLeft: "LEFT",
+        ArrowRight: "RIGHT",
+        w: "UP",
+        s: "DOWN",
+        a: "LEFT",
+        d: "RIGHT"
+    };
+    
+    if (keyMap[e.key] && wsReady && !gameOver) {
+        // 防止重复发送相同方向
+        if (keyMap[e.key] !== currentDir) {
+            currentDir = keyMap[e.key];
+            ws.send(currentDir);
+            updateDebugInfo("当前方向", currentDir);
+        }
+        e.preventDefault(); // 防止页面滚动
+    }
+    
+    // 按R键重置游戏
+    if (e.key === "r" || e.key === "R") {
+        resetGame();
+    }
+});
+
+function resetGame() {
+    if (wsReady) {
+        ws.send("RESET");
+        camInit = false;
+        gameOver = false;
+        gameOverText.style.display = "none";
+        updateDebugInfo("游戏状态", "运行中");
+        console.log("? 游戏已重置");
+    }
+}
+
+function changeAIMode() {
+    if (wsReady) {
+        ws.send(aiModeSelect.value);
+        console.log("? AI模式切换为:", aiModeSelect.value);
+    }
+}
+
+// ===== 启动 =====
+// 确保DOM加载完成后再连接
+document.addEventListener("DOMContentLoaded", () => {
+    connect();
+    requestAnimationFrame(draw);
+});
+</script>
+</body>
+</html>

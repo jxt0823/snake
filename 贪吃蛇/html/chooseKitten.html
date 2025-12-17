@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>贪吃喵大冒险--喵喵选择</title>
+        <link rel="stylesheet" href="../css/chooseKitten.css">
+    </head>
+    <body>
+        <div class="kitten-selection-container">
+            <button class="nav-btn prev-btn">❮</button>
+            
+            <div id="catsSlider">
+                <div class="kitten-option" data-kitten="1">
+                    <img src='../assets/1.png' alt="敏捷猫猫">
+                    <h2>敏捷猫猫</h2>
+                    <p>行动迅速的小猫，拥有超快的移动速度，移动速度+5%</p>
+                </div>
+                <div class="kitten-option" data-kitten="2">
+                    <img src="../assets/2.png" alt="防御猫猫">
+                    <h2>防御猫猫</h2>
+                    <p>拥有坚固防御的小猫，对坏果一定的防御效果，减少分数比正常少50%</p>
+                </div>
+                <div class="kitten-option" data-kitten="3">
+                    <img src="../assets/3.png" alt="幸运猫猫">
+                    <h2>幸运猫猫</h2>
+                    <p>自带好运光环的猫猫，可以有复活一次的机会，同时初始长度+5初始分数+5</p>
+                </div>
+                <div class="kitten-option" data-kitten="4">
+                    <img src="../assets/4.png" alt="魔法猫猫">
+                    <h2>魔法猫猫</h2>
+                    <p>掌握神秘魔法的小猫，吃到坏果会触发魔法，下一个吃到坏果不扣分，吃到好果加双倍分</p>
+                </div>
+                <div class="kitten-option disabled" data-kitten="0">
+                    <p>敬请期待...</p>
+                </div>
+            </div>
+            
+            <button class="nav-btn next-btn">❯</button>
+        </div>
+        
+        <div class="controls">
+            <div class="nav-indicator" id="navIndicator"></div>
+            <button id="confirmBtn" class="confirm-btn">确认选择</button>
+        </div>
+        
+        <script src="../js/chooseKitten.js"></script>
+    </body>
+</html>

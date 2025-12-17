@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃喵大冒险 - 地图选择</title>
+    <link rel="stylesheet" href="../css/chooseMap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 左上角返回按钮 -->
+    <div class="top-left-back">
+        <button class="top-left-back-btn" id="topBackBtn">
+            <i class="fas fa-arrow-left"></i> 返回
+        </button>
+    </div>
+    
+    <div class="map-selection-container">
+        <div class="header-decoration">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <h1>选择地图</h1>
+        
+        <div class="maps-container">
+            <!-- 教室地图 -->
+            <div class="map-card">
+                <div class="map-image-container">
+                    <img class="map-image" src="../assets/map1.png" alt="教室地图">
+                </div>
+                <div class="map-info">
+                    <h2 class="map-name">教室</h2>
+                    <p class="map-description">在充满知识的教室里学习，找出问题的正确答案，从而得分！</p>
+                    
+                    <div class="map-tags">
+                        <div class="tag">桌椅障碍</div>
+                        <div class="tag">知识问答</div>
+                        <div class="tag">中等难度</div>
+                    </div>
+                    
+                    <button class="select-btn" data-map="classroom">
+                        <i class="fas fa-play-circle"></i> 选择教室
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 操场地图 -->
+            <div class="map-card">
+                <div class="map-image-container">
+                    <img class="map-image" src="../assets/map2.png" alt="操场地图">
+                </div>
+                <div class="map-info">
+                    <h2 class="map-name">操场</h2>
+                    <p class="map-description">在广阔的操场上奔跑，收集运动饮料和能量棒。注意不要碰到运动器材！</p>
+                    
+                    <div class="map-tags">
+                        <div class="tag">广阔操场</div>
+                        <div class="tag">器材障碍</div>
+                        <div class="tag">简单难度</div>
+                    </div>
+                    
+                    <button class="select-btn" data-map="playground">
+                        <i class="fas fa-play-circle"></i> 选择操场
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 图书馆地图 -->
+            <div class="map-card">
+                <div class="map-image-container">
+                    <img class="map-image" src="../assets/map3.png" alt="图书馆地图">
+                </div>
+                <div class="map-info">
+                    <h2 class="map-name">图书馆</h2>
+                    <p class="map-description">在安静的图书馆中潜行，穿梭于书架之间，注意吃零食会被管理员发现！</p>
+                    
+                    <div class="map-tags">
+                        <div class="tag">书架迷宫</div>
+                        <div class="tag">潜行模式</div>
+                        <div class="tag">困难难度</div>
+                    </div>
+                    
+                    <button class="select-btn" data-map="library">
+                        <i class="fas fa-play-circle"></i> 选择图书馆
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/chooseMap.js"></script>
+</body>
+</html>

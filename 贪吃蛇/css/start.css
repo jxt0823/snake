@@ -1,0 +1,708 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.start-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/background.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.start-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+}
+
+.header-section h1 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    background:#FF8E53;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    animation: textFade 8s ease-in-out infinite;
+}
+
+.header-section img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+    position: absolute;
+    right: -160px;
+    z-index: 2;
+    animation: eatText 8s ease-in-out infinite;
+}
+
+@keyframes eatText {
+    0% {
+        right: -160px;
+        transform: scale(1) rotate(0deg);
+    }
+    15% {
+        right: -80px;
+        transform: scale(1.1) rotate(-5deg);
+    }
+    30% {
+        right: 0px;
+        transform: scale(1.15) rotate(5deg);
+    }
+    45% {
+        right: 80px;
+        transform: scale(1.1) rotate(-5deg);
+    }
+    60% {
+        right: calc(100% + 20px);
+        transform: scale(1.2) rotate(3deg);
+    }
+    65% {
+        right: calc(100% + 20px);
+        transform: scale(1.2) rotate(3deg);
+    }
+    70% {
+        right: -160px;
+        transform: scale(0.9) rotate(0deg);
+    }
+    100% {
+        right: -160px;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes textFade {
+    0%, 10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.7;
+    }
+    30% {
+        opacity: 0.4;
+    }
+    40% {
+        opacity: 0.1;
+    }
+    50%, 65% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 游戏模式区域 */
+.game-modes-section {
+    width: 100%;
+    max-width: 1400px; /* 增加最大宽度以适应更多卡片 */
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
+    border-radius: 2px;
+}
+
+.game-modes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* 减小间距以适应更多卡片 */
+}
+
+/* 游戏模式卡片 */
+.mode-card {
+    flex: 1;
+    min-width: 250px; /* 减小最小宽度 */
+    max-width: 280px; /* 减小最大宽度 */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mode-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.mode-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #FF6B6B, #4ECDC4, #FFD166);
+    transition: height 0.3s ease;
+    z-index: 1;
+}
+
+.mode-card[data-mode="time"]::before {
+    background: linear-gradient(90deg, #FF6B6B, #FF8E53);
+}
+
+.mode-card[data-mode="infinite"]::before {
+    background: linear-gradient(90deg, #4ECDC4, #44A08D);
+}
+
+.mode-card[data-mode="ai"]::before {
+    background: linear-gradient(90deg, #FFD166, #FF9A3D);
+}
+
+.mode-card[data-mode="online"]::before {
+    background: linear-gradient(90deg, #9D50BB, #6E48AA);
+}
+
+.mode-card:hover::before {
+    height: 8px;
+}
+
+.mode-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.mode-card[data-mode="time"] .mode-icon {
+    color: #FF6B6B;
+}
+
+.mode-card[data-mode="infinite"] .mode-icon {
+    color: #4ECDC4;
+}
+
+.mode-card[data-mode="ai"] .mode-icon {
+    color: #FFD166;
+}
+
+.mode-card[data-mode="online"] .mode-icon {
+    color: #9D50BB;
+}
+
+.mode-card:hover .mode-icon {
+    transform: scale(1.1);
+}
+
+.mode-name {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.time-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, margin-bottom 0.5s ease;
+}
+
+.mode-card[data-mode="time"].selected .time-options {
+    max-height: 200px;
+    margin-bottom: 20px;
+}
+
+.time-option {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 12px;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.time-option:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.time-option.selected {
+    background: rgba(255, 107, 107, 0.3);
+    border-color: #FF6B6B;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+}
+
+.time-option i {
+    font-size: 1.2rem;
+}
+
+.start-btn {
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    pointer-events: none;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+.mode-card[data-mode="infinite"] .start-btn,
+.mode-card[data-mode="ai"] .start-btn,
+.mode-card[data-mode="online"] .start-btn {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+}
+
+.mode-card[data-mode="time"].has-selected-time .start-btn {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+}
+
+.mode-card[data-mode="infinite"] .start-btn {
+    background: linear-gradient(45deg, #4ECDC4, #44A08D);
+}
+
+.mode-card[data-mode="ai"] .start-btn {
+    background: linear-gradient(45deg, #FFD166, #FF9A3D);
+}
+
+.mode-card[data-mode="online"] .start-btn {
+    background: linear-gradient(45deg, #9D50BB, #6E48AA);
+}
+
+.start-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.start-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.start-btn:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.bottom-options-section {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.bottom-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bottom-option {
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-option:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.option-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFD700;
+    transition: transform 0.3s ease;
+}
+
+.bottom-option:hover .option-icon {
+    transform: scale(1.1);
+}
+
+.option-name {
+    font-size: 1.3rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式适配 */
+@media (max-width: 1200px) {
+    .game-modes {
+        gap: 20px;
+    }
+    
+    .mode-card {
+        min-width: 230px;
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .game-modes {
+        gap: 25px;
+    }
+    
+    .mode-card {
+        min-width: 280px;
+        max-width: 350px;
+    }
+    
+    .bottom-option {
+        min-width: 160px;
+    }
+
+    /* 响应式调整动画 */
+    .header-section h1 {
+        font-size: 4rem;
+    }
+    
+    .header-section img {
+        width: 130px;
+        height: 130px;
+        right: -140px;
+    }
+    
+    @keyframes eatText {
+        0% {
+            right: -140px;
+            transform: scale(1) rotate(0deg);
+        }
+        15% {
+            right: -70px;
+            transform: scale(1.1) rotate(-5deg);
+        }
+        30% {
+            right: 0px;
+            transform: scale(1.15) rotate(5deg);
+        }
+        45% {
+            right: 70px;
+            transform: scale(1.1) rotate(-5deg);
+        }
+        60% {
+            right: calc(100% + 15px);
+            transform: scale(1.2) rotate(3deg);
+        }
+        65% {
+            right: calc(100% + 15px);
+            transform: scale(1.2) rotate(3deg);
+        }
+        70% {
+            right: -140px;
+            transform: scale(0.9) rotate(0deg);
+        }
+        100% {
+            right: -140px;
+            transform: scale(1) rotate(0deg);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header-section h1 {
+        font-size: 2.8rem;
+    }
+    
+    .header-section img {
+        width: 130px;
+        height: 130px;
+        right: -120px;
+    }
+
+    @keyframes eatText {
+        0% {
+            right: -120px;
+            transform: scale(1) rotate(0deg);
+        }
+        15% {
+            right: -60px;
+            transform: scale(1.1) rotate(-5deg);
+        }
+        30% {
+            right: 0px;
+            transform: scale(1.15) rotate(5deg);
+        }
+        45% {
+            right: 60px;
+            transform: scale(1.1) rotate(-5deg);
+        }
+        60% {
+            right: calc(100% + 10px);
+            transform: scale(1.2) rotate(3deg);
+        }
+        65% {
+            right: calc(100% + 10px);
+            transform: scale(1.2) rotate(3deg);
+        }
+        70% {
+            right: -120px;
+            transform: scale(0.9) rotate(0deg);
+        }
+        100% {
+            right: -120px;
+            transform: scale(1) rotate(0deg);
+        }
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .game-modes {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .mode-card {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .bottom-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .bottom-option {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .header-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .header-section img {
+        width: 100px;
+        height: 100px;
+        right: -100px;
+    }
+
+    @keyframes eatText {
+        0% {
+            right: -100px;
+            transform: scale(1) rotate(0deg);
+        }
+        15% {
+            right: -50px;
+            transform: scale(1.1) rotate(-5deg);
+        }
+        30% {
+            right: 0px;
+            transform: scale(1.15) rotate(5deg);
+        }
+        45% {
+            right: 50px;
+            transform: scale(1.1) rotate(-5deg);
+        }
+        60% {
+            right: calc(100% + 5px);
+            transform: scale(1.2) rotate(3deg);
+        }
+        65% {
+            right: calc(100% + 5px);
+            transform: scale(1.2) rotate(3deg);
+        }
+        70% {
+            right: -100px;
+            transform: scale(0.9) rotate(0deg);
+        }
+        100% {
+            right: -100px;
+            transform: scale(1) rotate(0deg);
+        }
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .mode-card {
+        padding: 20px 15px;
+    }
+    
+    .mode-icon {
+        font-size: 3rem;
+        height: 70px;
+    }
+    
+    .mode-name {
+        font-size: 1.6rem;
+    }
+    
+    .time-option {
+        padding: 10px;
+        font-size: 1rem;
+    }
+    
+    .start-btn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .bottom-option {
+        padding: 15px 12px;
+    }
+    
+    .option-icon {
+        font-size: 2rem;
+        height: 50px;
+    }
+    
+    .option-name {
+        font-size: 1.1rem;
+    }
+}

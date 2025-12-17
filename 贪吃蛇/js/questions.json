@@ -1,0 +1,1685 @@
+[    
+    {
+        "question": "《静夜思》的作者是谁？",
+        "answers": [
+            {"text": "李白", "correct": true},
+            {"text": "杜甫", "correct": false},
+            {"text": "白居易", "correct": false},
+            {"text": "王维", "correct": false}
+        ]
+    },
+    {
+        "question": "以下哪个字的部首是“氵”？",
+        "answers": [
+            {"text": "林", "correct": false},
+            {"text": "河", "correct": true},
+            {"text": "山", "correct": false},
+            {"text": "土", "correct": false}
+        ]
+    },
+    {
+        "question": "“春风又绿江南岸”的下一句是？",
+        "answers": [
+            {"text": "明月何时照我还", "correct": true},
+            {"text": "轻舟已过万重山", "correct": false},
+            {"text": "疑是银河落九天", "correct": false},
+            {"text": "霜叶红于二月花", "correct": false}
+        ]
+    },
+    {
+        "question": "“破釜沉舟”这个成语与哪位历史人物有关？",
+        "answers": [
+            {"text": "项羽", "correct": true},
+            {"text": "刘邦", "correct": false},
+            {"text": "韩信", "correct": false},
+            {"text": "张良", "correct": false}
+        ]
+    },
+    {
+        "question": "《西游记》中孙悟空的兵器是什么？",
+        "answers": [
+            {"text": "金箍棒", "correct": true},
+            {"text": "九齿钉耙", "correct": false},
+            {"text": "降妖宝杖", "correct": false},
+            {"text": "青龙偃月刀", "correct": false}
+        ]
+    },
+    {
+        "question": "“忽如一夜春风来，千树万树梨花开”描写的是哪个季节？",
+        "answers": [
+            {"text": "冬季", "correct": true},
+            {"text": "春季", "correct": false},
+            {"text": "秋季", "correct": false},
+            {"text": "夏季", "correct": false}
+        ]
+    },
+    {
+        "question": "汉字“日”的笔画数是多少？",
+        "answers": [
+            {"text": "4", "correct": true},
+            {"text": "3", "correct": false},
+            {"text": "2", "correct": false},
+            {"text": "5", "correct": false}
+        ]
+    },
+    {
+        "question": "《红楼梦》的作者是？",
+        "answers": [
+            {"text": "曹雪芹", "correct": true},
+            {"text": "罗贯中", "correct": false},
+            {"text": "施耐庵", "correct": false},
+            {"text": "吴承恩", "correct": false}
+        ]
+    },
+    {
+        "question": "“少壮不努力，老大徒伤悲”出自哪首诗？",
+        "answers": [
+            {"text": "《长歌行》", "correct": true},
+            {"text": "《登鹳雀楼》", "correct": false},
+            {"text": "《静夜思》", "correct": false},
+            {"text": "《春晓》", "correct": false}
+        ]
+    },
+    {
+        "question": "“采菊东篱下，悠然见南山”的作者是？",
+        "answers": [
+            {"text": "陶渊明", "correct": true},
+            {"text": "李白", "correct": false},
+            {"text": "杜甫", "correct": false},
+            {"text": "王维", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪个不是四大名著？",
+        "answers": [
+            {"text": "《聊斋志异》", "correct": true},
+            {"text": "《三国演义》", "correct": false},
+            {"text": "《水浒传》", "correct": false},
+            {"text": "《西游记》", "correct": false}
+        ]
+    },
+    {
+        "question": "“但愿人长久，千里共婵娟”中的“婵娟”指的是？",
+        "answers": [
+            {"text": "月亮", "correct": true},
+            {"text": "美女", "correct": false},
+            {"text": "太阳", "correct": false},
+            {"text": "星星", "correct": false}
+        ]
+    },
+    {
+        "question": "“飞流直下三千尺，疑是银河落九天”描写的是哪个景点？",
+        "answers": [
+            {"text": "庐山瀑布", "correct": true},
+            {"text": "黄果树瀑布", "correct": false},
+            {"text": "壶口瀑布", "correct": false},
+            {"text": "德天瀑布", "correct": false}
+        ]
+    },
+    {
+        "question": "“人生自古谁无死，留取丹心照汗青”的作者是？",
+        "answers": [
+            {"text": "文天祥", "correct": true},
+            {"text": "岳飞", "correct": false},
+            {"text": "陆游", "correct": false},
+            {"text": "辛弃疾", "correct": false}
+        ]
+    },
+    {
+        "question": "汉字“好”的结构类型是？",
+        "answers": [
+            {"text": "左右结构", "correct": true},
+            {"text": "上下结构", "correct": false},
+            {"text": "独体字", "correct": false},
+            {"text": "半包围结构", "correct": false}
+        ]
+    },
+    {
+        "question": "《论语》的核心思想是？",
+        "answers": [
+            {"text": "仁", "correct": true},
+            {"text": "道", "correct": false},
+            {"text": "法", "correct": false},
+            {"text": "墨", "correct": false}
+        ]
+    },
+    {
+        "question": "“接天莲叶无穷碧，映日荷花别样红”描写的是哪个季节？",
+        "answers": [
+            {"text": "夏季", "correct": true},
+            {"text": "春季", "correct": false},
+            {"text": "秋季", "correct": false},
+            {"text": "冬季", "correct": false}
+        ]
+    },
+    {
+        "question": "“沉鱼落雁，闭月羞花”中的“沉鱼”指的是哪位美女？",
+        "answers": [
+            {"text": "西施", "correct": true},
+            {"text": "王昭君", "correct": false},
+            {"text": "貂蝉", "correct": false},
+            {"text": "杨玉环", "correct": false}
+        ]
+    },
+    {
+        "question": "“欲穷千里目，更上一层楼”的作者是？",
+        "answers": [
+            {"text": "王之涣", "correct": true},
+            {"text": "孟浩然", "correct": false},
+            {"text": "贺知章", "correct": false},
+            {"text": "王之涣", "correct": false}
+        ]
+    },
+    {
+        "question": "“两个黄鹂鸣翠柳，一行白鹭上青天”的作者是？",
+        "answers": [
+            {"text": "杜甫", "correct": true},
+            {"text": "李白", "correct": false},
+            {"text": "白居易", "correct": false},
+            {"text": "刘禹锡", "correct": false}
+        ]
+    },
+    {
+        "question": "“野火烧不尽，春风吹又生”描写的是哪种植物？",
+        "answers": [
+            {"text": "草", "correct": true},
+            {"text": "花", "correct": false},
+            {"text": "树", "correct": false},
+            {"text": "竹", "correct": false}
+        ]
+    },
+    {
+        "question": "《三字经》的第一句是？",
+        "answers": [
+            {"text": "人之初，性本善", "correct": true},
+            {"text": "养不教，父之过", "correct": false},
+            {"text": "昔孟母，择邻处", "correct": false},
+            {"text": "苟不教，性乃迁", "correct": false}
+        ]
+    },
+    {
+        "question": "“初唐四杰”不包括以下哪位？",
+        "answers": [
+            {"text": "李白", "correct": true},
+            {"text": "王勃", "correct": false},
+            {"text": "杨炯", "correct": false},
+            {"text": "卢照邻", "correct": false}
+        ]
+    },
+    {
+        "question": "“洛阳亲友如相问，一片冰心在玉壶”的作者是？",
+        "answers": [
+            {"text": "王昌龄", "correct": true},
+            {"text": "王之涣", "correct": false},
+            {"text": "王维", "correct": false},
+            {"text": "岑参", "correct": false}
+        ]
+    },
+    {
+        "question": "“千山鸟飞绝，万径人踪灭”描写的是哪个季节？",
+        "answers": [
+            {"text": "冬季", "correct": true},
+            {"text": "秋季", "correct": false},
+            {"text": "春季", "correct": false},
+            {"text": "夏季", "correct": false}
+        ]
+    },
+    {
+        "question": "“醉翁之意不在酒”中的“醉翁”指的是？",
+        "answers": [
+            {"text": "欧阳修", "correct": true},
+            {"text": "苏轼", "correct": false},
+            {"text": "柳宗元", "correct": false},
+            {"text": "范仲淹", "correct": false}
+        ]
+    },
+    {
+        "question": "汉字“国”的部首是？",
+        "answers": [
+            {"text": "囗", "correct": true},
+            {"text": "玉", "correct": false},
+            {"text": "丶", "correct": false},
+            {"text": "一", "correct": false}
+        ]
+    },
+    {
+        "question": "“春蚕到死丝方尽，蜡炬成灰泪始干”的作者是？",
+        "answers": [
+            {"text": "李商隐", "correct": true},
+            {"text": "杜牧", "correct": false},
+            {"text": "温庭筠", "correct": false},
+            {"text": "李贺", "correct": false}
+        ]
+    },
+    {
+        "question": "“莫愁前路无知己，天下谁人不识君”的作者是？",
+        "answers": [
+            {"text": "高适", "correct": true},
+            {"text": "岑参", "correct": false},
+            {"text": "王之涣", "correct": false},
+            {"text": "王昌龄", "correct": false}
+        ]
+    },
+    {
+        "question": "“出师未捷身先死，长使英雄泪满襟”描写的是哪位人物？",
+        "answers": [
+            {"text": "诸葛亮", "correct": true},
+            {"text": "刘备", "correct": false},
+            {"text": "关羽", "correct": false},
+            {"text": "张飞", "correct": false}
+        ]
+    },    
+    {
+        "question": "10以内最大的奇数是？",
+        "answers": [
+            {"text": "9", "correct": true},
+            {"text": "8", "correct": false},
+            {"text": "7", "correct": false},
+            {"text": "10", "correct": false}
+        ]
+    },
+    {
+        "question": "圆的周长公式中，π约等于？",
+        "answers": [
+            {"text": "3.14", "correct": true},
+            {"text": "3.15", "correct": false},
+            {"text": "3.16", "correct": false},
+            {"text": "3.17", "correct": false}
+        ]
+    },
+    {
+        "question": "2的立方等于多少？",
+        "answers": [
+            {"text": "8", "correct": true},
+            {"text": "6", "correct": false},
+            {"text": "4", "correct": false},
+            {"text": "10", "correct": false}
+        ]
+    },
+    {
+        "question": "直角三角形的一个锐角是30度，另一个锐角是多少度？",
+        "answers": [
+            {"text": "60度", "correct": true},
+            {"text": "50度", "correct": false},
+            {"text": "40度", "correct": false},
+            {"text": "70度", "correct": false}
+        ]
+    },
+    {
+        "question": "最小的质数是？",
+        "answers": [
+            {"text": "2", "correct": true},
+            {"text": "1", "correct": false},
+            {"text": "3", "correct": false},
+            {"text": "4", "correct": false}
+        ]
+    },
+    {
+        "question": "50的一半是多少？",
+        "answers": [
+            {"text": "25", "correct": true},
+            {"text": "20", "correct": false},
+            {"text": "30", "correct": false},
+            {"text": "15", "correct": false}
+        ]
+    },
+    {
+        "question": "平行四边形的对边有什么特征？",
+        "answers": [
+            {"text": "平行且相等", "correct": true},
+            {"text": "垂直且相等", "correct": false},
+            {"text": "平行且不相等", "correct": false},
+            {"text": "垂直且不相等", "correct": false}
+        ]
+    },
+    {
+        "question": "1米等于多少厘米？",
+        "answers": [
+            {"text": "100", "correct": true},
+            {"text": "10", "correct": false},
+            {"text": "1000", "correct": false},
+            {"text": "50", "correct": false}
+        ]
+    },
+    {
+        "question": "分数1/2转换成小数是？",
+        "answers": [
+            {"text": "0.5", "correct": true},
+            {"text": "0.4", "correct": false},
+            {"text": "0.6", "correct": false},
+            {"text": "0.7", "correct": false}
+        ]
+    },
+    {
+        "question": "8和12的最大公因数是？",
+        "answers": [
+            {"text": "4", "correct": true},
+            {"text": "2", "correct": false},
+            {"text": "6", "correct": false},
+            {"text": "8", "correct": false}
+        ]
+    },
+    {
+        "question": "一个数的倒数是它本身，这个数是？",
+        "answers": [
+            {"text": "1", "correct": true},
+            {"text": "2", "correct": false},
+            {"text": "0", "correct": false},
+            {"text": "3", "correct": false}
+        ]
+    },
+    {
+        "question": "三角形的内角和是多少度？",
+        "answers": [
+            {"text": "180度", "correct": true},
+            {"text": "90度", "correct": false},
+            {"text": "360度", "correct": false},
+            {"text": "270度", "correct": false}
+        ]
+    },
+    {
+        "question": "0不能作为？",
+        "answers": [
+            {"text": "除数", "correct": true},
+            {"text": "被除数", "correct": false},
+            {"text": "因数", "correct": false},
+            {"text": "加数", "correct": false}
+        ]
+    },
+    {
+        "question": "1平方千米等于多少公顷？",
+        "answers": [
+            {"text": "100", "correct": true},
+            {"text": "10", "correct": false},
+            {"text": "1000", "correct": false},
+            {"text": "50", "correct": false}
+        ]
+    },
+    {
+        "question": "把3米长的绳子平均分成5段，每段长多少米？",
+        "answers": [
+            {"text": "0.6米", "correct": true},
+            {"text": "0.5米", "correct": false},
+            {"text": "0.8米", "correct": false},
+            {"text": "0.7米", "correct": false}
+        ]
+    },
+    {
+        "question": "最小的合数是？",
+        "answers": [
+            {"text": "4", "correct": true},
+            {"text": "2", "correct": false},
+            {"text": "3", "correct": false},
+            {"text": "5", "correct": false}
+        ]
+    },
+    {
+        "question": "24小时制中，下午3点用数字表示是？",
+        "answers": [
+            {"text": "15", "correct": true},
+            {"text": "3", "correct": false},
+            {"text": "13", "correct": false},
+            {"text": "14", "correct": false}
+        ]
+    },
+    {
+        "question": "正方形的边长是5厘米，面积是多少平方厘米？",
+        "answers": [
+            {"text": "25", "correct": true},
+            {"text": "20", "correct": false},
+            {"text": "15", "correct": false},
+            {"text": "30", "correct": false}
+        ]
+    },
+    {
+        "question": "能被2整除的数是？",
+        "answers": [
+            {"text": "偶数", "correct": true},
+            {"text": "奇数", "correct": false},
+            {"text": "质数", "correct": false},
+            {"text": "合数", "correct": false}
+        ]
+    },
+    {
+        "question": "7+8×2的结果是？",
+        "answers": [
+            {"text": "23", "correct": true},
+            {"text": "30", "correct": false},
+            {"text": "19", "correct": false},
+            {"text": "25", "correct": false}
+        ]
+    },
+    {
+        "question": "1吨等于多少千克？",
+        "answers": [
+            {"text": "1000", "correct": true},
+            {"text": "100", "correct": false},
+            {"text": "10", "correct": false},
+            {"text": "500", "correct": false}
+        ]
+    },
+    {
+        "question": "长方形的长是8厘米，宽是3厘米，周长是多少厘米？",
+        "answers": [
+            {"text": "22", "correct": true},
+            {"text": "24", "correct": false},
+            {"text": "11", "correct": false},
+            {"text": "20", "correct": false}
+        ]
+    },
+    {
+        "question": "圆周率π是一个？",
+        "answers": [
+            {"text": "无限不循环小数", "correct": true},
+            {"text": "有限小数", "correct": false},
+            {"text": "无限循环小数", "correct": false},
+            {"text": "整数", "correct": false}
+        ]
+    },
+    {
+        "question": "3/4和75%的大小关系是？",
+        "answers": [
+            {"text": "相等", "correct": true},
+            {"text": "3/4大", "correct": false},
+            {"text": "75%大", "correct": false},
+            {"text": "无法比较", "correct": false}
+        ]
+    },
+    {
+        "question": "如果x+5=12，那么x等于？",
+        "answers": [
+            {"text": "7", "correct": true},
+            {"text": "8", "correct": false},
+            {"text": "6", "correct": false},
+            {"text": "9", "correct": false}
+        ]
+    },
+    {
+        "question": "五边形有多少条边？",
+        "answers": [
+            {"text": "5", "correct": true},
+            {"text": "4", "correct": false},
+            {"text": "6", "correct": false},
+            {"text": "7", "correct": false}
+        ]
+    },
+    {
+        "question": "100以内最大的质数是？",
+        "answers": [
+            {"text": "97", "correct": true},
+            {"text": "98", "correct": false},
+            {"text": "99", "correct": false},
+            {"text": "100", "correct": false}
+        ]
+    },
+    {
+        "question": "2.5×4的结果是？",
+        "answers": [
+            {"text": "10", "correct": true},
+            {"text": "8", "correct": false},
+            {"text": "12", "correct": false},
+            {"text": "9", "correct": false}
+        ]
+    },
+    {
+        "question": "把10克盐溶于90克水中，盐水的含盐率是？",
+        "answers": [
+            {"text": "10%", "correct": true},
+            {"text": "9%", "correct": false},
+            {"text": "11%", "correct": false},
+            {"text": "12%", "correct": false}
+        ]
+    },
+    {
+        "question": "钟表上时针走一圈是多少小时？",
+        "answers": [
+            {"text": "12", "correct": true},
+            {"text": "24", "correct": false},
+            {"text": "6", "correct": false},
+            {"text": "1", "correct": false}
+        ]
+    },
+    {
+        "question": "“apple”的中文意思是？",
+        "answers": [
+            {"text": "苹果", "correct": true},
+            {"text": "香蕉", "correct": false},
+            {"text": "橙子", "correct": false},
+            {"text": "梨", "correct": false}
+        ]
+    },
+    {
+        "question": "英语字母表中有多少个字母？",
+        "answers": [
+            {"text": "26", "correct": true},
+            {"text": "24", "correct": false},
+            {"text": "25", "correct": false},
+            {"text": "27", "correct": false}
+        ]
+    },
+    {
+        "question": "“I'm fine, thank you.”的中文意思是？",
+        "answers": [
+            {"text": "我很好，谢谢你。", "correct": true},
+            {"text": "我不舒服，谢谢。", "correct": false},
+            {"text": "我很好，不用谢。", "correct": false},
+            {"text": "我不舒服，不用谢。", "correct": false}
+        ]
+    },
+    {
+        "question": "“book”的复数形式是？",
+        "answers": [
+            {"text": "books", "correct": true},
+            {"text": "bookes", "correct": false},
+            {"text": "book", "correct": false},
+            {"text": "book's", "correct": false}
+        ]
+    },
+    {
+        "question": "“星期一”的英文是？",
+        "answers": [
+            {"text": "Monday", "correct": true},
+            {"text": "Tuesday", "correct": false},
+            {"text": "Wednesday", "correct": false},
+            {"text": "Thursday", "correct": false}
+        ]
+    },
+    {
+        "question": "“How old are you?”的意思是？",
+        "answers": [
+            {"text": "你几岁了？", "correct": true},
+            {"text": "你好吗？", "correct": false},
+            {"text": "你是谁？", "correct": false},
+            {"text": "你在哪里？", "correct": false}
+        ]
+    },
+    {
+        "question": "“cat”的中文意思是？",
+        "answers": [
+            {"text": "猫", "correct": true},
+            {"text": "狗", "correct": false},
+            {"text": "兔子", "correct": false},
+            {"text": "老鼠", "correct": false}
+        ]
+    },
+    {
+        "question": "“pen”的中文意思是？",
+        "answers": [
+            {"text": "钢笔", "correct": true},
+            {"text": "铅笔", "correct": false},
+            {"text": "橡皮", "correct": false},
+            {"text": "尺子", "correct": false}
+        ]
+    },
+    {
+        "question": "“hello”的意思是？",
+        "answers": [
+            {"text": "你好", "correct": true},
+            {"text": "再见", "correct": false},
+            {"text": "谢谢", "correct": false},
+            {"text": "对不起", "correct": false}
+        ]
+    },
+    {
+        "question": "“teacher”的中文意思是？",
+        "answers": [
+            {"text": "老师", "correct": true},
+            {"text": "学生", "correct": false},
+            {"text": "医生", "correct": false},
+            {"text": "护士", "correct": false}
+        ]
+    },
+    {
+        "question": "“water”的中文意思是？",
+        "answers": [
+            {"text": "水", "correct": true},
+            {"text": "牛奶", "correct": false},
+            {"text": "果汁", "correct": false},
+            {"text": "茶", "correct": false}
+        ]
+    },
+    {
+        "question": "“数字5”的英文是？",
+        "answers": [
+            {"text": "five", "correct": true},
+            {"text": "four", "correct": false},
+            {"text": "six", "correct": false},
+            {"text": "seven", "correct": false}
+        ]
+    },
+    {
+        "question": "“school”的中文意思是？",
+        "answers": [
+            {"text": "学校", "correct": true},
+            {"text": "家庭", "correct": false},
+            {"text": "公园", "correct": false},
+            {"text": "医院", "correct": false}
+        ]
+    },
+    {
+        "question": "“father”的中文意思是？",
+        "answers": [
+            {"text": "爸爸", "correct": true},
+            {"text": "妈妈", "correct": false},
+            {"text": "爷爷", "correct": false},
+            {"text": "奶奶", "correct": false}
+        ]
+    },
+    {
+        "question": "“red”的中文意思是？",
+        "answers": [
+            {"text": "红色", "correct": true},
+            {"text": "蓝色", "correct": false},
+            {"text": "绿色", "correct": false},
+            {"text": "黄色", "correct": false}
+        ]
+    },
+    {
+        "question": "“goodbye”的意思是？",
+        "answers": [
+            {"text": "再见", "correct": true},
+            {"text": "你好", "correct": false},
+            {"text": "谢谢", "correct": false},
+            {"text": "对不起", "correct": false}
+        ]
+    },
+    {
+        "question": "“mother”的中文意思是？",
+        "answers": [
+            {"text": "妈妈", "correct": true},
+            {"text": "爸爸", "correct": false},
+            {"text": "姐姐", "correct": false},
+            {"text": "哥哥", "correct": false}
+        ]
+    },
+    {
+        "question": "“ten”的中文意思是？",
+        "answers": [
+            {"text": "十", "correct": true},
+            {"text": "九", "correct": false},
+            {"text": "八", "correct": false},
+            {"text": "七", "correct": false}
+        ]
+    },
+    {
+        "question": "“blue”的中文意思是？",
+        "answers": [
+            {"text": "蓝色", "correct": true},
+            {"text": "红色", "correct": false},
+            {"text": "白色", "correct": false},
+            {"text": "黑色", "correct": false}
+        ]
+    },
+    {
+        "question": "“thank you”的意思是？",
+        "answers": [
+            {"text": "谢谢你", "correct": true},
+            {"text": "对不起", "correct": false},
+            {"text": "没关系", "correct": false},
+            {"text": "不客气", "correct": false}
+        ]
+    },
+    {
+        "question": "“desk”的中文意思是？",
+        "answers": [
+            {"text": "书桌", "correct": true},
+            {"text": "椅子", "correct": false},
+            {"text": "桌子", "correct": false},
+            {"text": "床", "correct": false}
+        ]
+    },
+    {
+        "question": "“green”的中文意思是？",
+        "answers": [
+            {"text": "绿色", "correct": true},
+            {"text": "黄色", "correct": false},
+            {"text": "紫色", "correct": false},
+            {"text": "橙色", "correct": false}
+        ]
+    },
+    {
+        "question": "“one”的中文意思是？",
+        "answers": [
+            {"text": "一", "correct": true},
+            {"text": "二", "correct": false},
+            {"text": "三", "correct": false},
+            {"text": "四", "correct": false}
+        ]
+    },
+    {
+        "question": "“sorry”的意思是？",
+        "answers": [
+            {"text": "对不起", "correct": true},
+            {"text": "谢谢", "correct": false},
+            {"text": "再见", "correct": false},
+            {"text": "你好", "correct": false}
+        ]
+    },
+    {
+        "question": "“bird”的中文意思是？",
+        "answers": [
+            {"text": "鸟", "correct": true},
+            {"text": "鱼", "correct": false},
+            {"text": "鸡", "correct": false},
+            {"text": "鸭", "correct": false}
+        ]
+    },
+    {
+        "question": "“yellow”的中文意思是？",
+        "answers": [
+            {"text": "黄色", "correct": true},
+            {"text": "绿色", "correct": false},
+            {"text": "粉色", "correct": false},
+            {"text": "棕色", "correct": false}
+        ]
+    },
+    {
+        "question": "“two”的中文意思是？",
+        "answers": [
+            {"text": "二", "correct": true},
+            {"text": "一", "correct": false},
+            {"text": "三", "correct": false},
+            {"text": "五", "correct": false}
+        ]
+    },
+    {
+        "question": "“you”的中文意思是？",
+        "answers": [
+            {"text": "你/你们", "correct": true},
+            {"text": "我", "correct": false},
+            {"text": "他", "correct": false},
+            {"text": "她", "correct": false}
+        ]
+    },
+    {
+        "question": "“dog”的中文意思是？",
+        "answers": [
+            {"text": "狗", "correct": true},
+            {"text": "猫", "correct": false},
+            {"text": "猪", "correct": false},
+            {"text": "羊", "correct": false}
+        ]
+    },
+    {
+        "question": "“three”的中文意思是？",
+        "answers": [
+            {"text": "三", "correct": true},
+            {"text": "四", "correct": false},
+            {"text": "二", "correct": false},
+            {"text": "六", "correct": false}
+        ]
+    },    
+    {
+        "question": "声音的传播需要什么？",
+        "answers": [
+            {"text": "介质", "correct": true},
+            {"text": "真空", "correct": false},
+            {"text": "电场", "correct": false},
+            {"text": "磁场", "correct": false}
+        ]
+    },
+    {
+        "question": "光在真空中的传播速度约为多少？",
+        "answers": [
+            {"text": "3×10^8米/秒", "correct": true},
+            {"text": "3×10^7米/秒", "correct": false},
+            {"text": "3×10^9米/秒", "correct": false},
+            {"text": "3×10^6米/秒", "correct": false}
+        ]
+    },
+    {
+        "question": "牛顿第一定律又被称为？",
+        "answers": [
+            {"text": "惯性定律", "correct": true},
+            {"text": "能量守恒定律", "correct": false},
+            {"text": "作用力与反作用力定律", "correct": false},
+            {"text": "万有引力定律", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种现象属于光的反射？",
+        "answers": [
+            {"text": "镜子成像", "correct": true},
+            {"text": "筷子在水中变弯", "correct": false},
+            {"text": "小孔成像", "correct": false},
+            {"text": "彩虹", "correct": false}
+        ]
+    },
+    {
+        "question": "物体的质量不随下列哪个因素改变？",
+        "answers": [
+            {"text": "位置", "correct": true},
+            {"text": "形状", "correct": false},
+            {"text": "状态", "correct": false},
+            {"text": "温度", "correct": false}
+        ]
+    },
+    {
+        "question": "压强的单位是？",
+        "answers": [
+            {"text": "帕斯卡", "correct": true},
+            {"text": "牛顿", "correct": false},
+            {"text": "焦耳", "correct": false},
+            {"text": "瓦特", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种能源属于可再生能源？",
+        "answers": [
+            {"text": "太阳能", "correct": true},
+            {"text": "煤炭", "correct": false},
+            {"text": "石油", "correct": false},
+            {"text": "天然气", "correct": false}
+        ]
+    },
+    {
+        "question": "电流的单位是？",
+        "answers": [
+            {"text": "安培", "correct": true},
+            {"text": "伏特", "correct": false},
+            {"text": "欧姆", "correct": false},
+            {"text": "瓦特", "correct": false}
+        ]
+    },
+    {
+        "question": "力的三要素不包括？",
+        "answers": [
+            {"text": "力的大小", "correct": false},
+            {"text": "力的方向", "correct": false},
+            {"text": "力的作用点", "correct": false},
+            {"text": "力的速度", "correct": true}
+        ]
+    },
+    {
+        "question": "下列哪种现象属于熔化？",
+        "answers": [
+            {"text": "冰变成水", "correct": true},
+            {"text": "水变成冰", "correct": false},
+            {"text": "水变成水蒸气", "correct": false},
+            {"text": "水蒸气变成水", "correct": false}
+        ]
+    },
+    {
+        "question": "凸透镜对光线有什么作用？",
+        "answers": [
+            {"text": "会聚", "correct": true},
+            {"text": "发散", "correct": false},
+            {"text": "反射", "correct": false},
+            {"text": "折射", "correct": false}
+        ]
+    },
+    {
+        "question": "功的单位是？",
+        "answers": [
+            {"text": "焦耳", "correct": true},
+            {"text": "瓦特", "correct": false},
+            {"text": "牛顿", "correct": false},
+            {"text": "帕斯卡", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种摩擦属于有益摩擦？",
+        "answers": [
+            {"text": "走路时鞋底与地面的摩擦", "correct": true},
+            {"text": "机器轴承间的摩擦", "correct": false},
+            {"text": "滑雪时滑雪板与雪地的摩擦", "correct": false},
+            {"text": "汽车行驶时空气与车身的摩擦", "correct": false}
+        ]
+    },
+    {
+        "question": "电压的单位是？",
+        "answers": [
+            {"text": "伏特", "correct": true},
+            {"text": "安培", "correct": false},
+            {"text": "欧姆", "correct": false},
+            {"text": "焦耳", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种现象属于凝华？",
+        "answers": [
+            {"text": "霜的形成", "correct": true},
+            {"text": "露的形成", "correct": false},
+            {"text": "雾的形成", "correct": false},
+            {"text": "雨的形成", "correct": false}
+        ]
+    },
+    {
+        "question": "电阻的单位是？",
+        "answers": [
+            {"text": "欧姆", "correct": true},
+            {"text": "伏特", "correct": false},
+            {"text": "安培", "correct": false},
+            {"text": "瓦特", "correct": false}
+        ]
+    },
+    {
+        "question": "功率的单位是？",
+        "answers": [
+            {"text": "瓦特", "correct": true},
+            {"text": "焦耳", "correct": false},
+            {"text": "牛顿", "correct": false},
+            {"text": "帕斯卡", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种现象属于光的折射？",
+        "answers": [
+            {"text": "看水中的鱼", "correct": true},
+            {"text": "日食", "correct": false},
+            {"text": "月食", "correct": false},
+            {"text": "影子", "correct": false}
+        ]
+    },
+    {
+        "question": "重力的方向是？",
+        "answers": [
+            {"text": "竖直向下", "correct": true},
+            {"text": "垂直向下", "correct": false},
+            {"text": "水平向右", "correct": false},
+            {"text": "斜向下", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种物质的密度最大？",
+        "answers": [
+            {"text": "水银", "correct": true},
+            {"text": "水", "correct": false},
+            {"text": "酒精", "correct": false},
+            {"text": "汽油", "correct": false}
+        ]
+    },
+    {
+        "question": "声音在下列哪种介质中传播最快？",
+        "answers": [
+            {"text": "固体", "correct": true},
+            {"text": "液体", "correct": false},
+            {"text": "气体", "correct": false},
+            {"text": "真空", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种电路连接方式是并联？",
+        "answers": [
+            {"text": "家庭电路中的用电器", "correct": true},
+            {"text": "手电筒中的电池", "correct": false},
+            {"text": "串联的小彩灯", "correct": false},
+            {"text": "电路中的开关和用电器", "correct": false}
+        ]
+    },
+    {
+        "question": "升华现象是指物质从什么状态直接变成气态？",
+        "answers": [
+            {"text": "固态", "correct": true},
+            {"text": "液态", "correct": false},
+            {"text": "气态", "correct": false},
+            {"text": "等离子态", "correct": false}
+        ]
+    },
+    {
+        "question": "牛顿第二定律的公式是？",
+        "answers": [
+            {"text": "F=ma", "correct": true},
+            {"text": "F=mv", "correct": false},
+            {"text": "E=mc²", "correct": false},
+            {"text": "W=Fs", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种现象属于扩散现象？",
+        "answers": [
+            {"text": "闻到花香", "correct": true},
+            {"text": "扫地时灰尘飞扬", "correct": false},
+            {"text": "雪花飘落", "correct": false},
+            {"text": "雨滴下落", "correct": false}
+        ]
+    },
+    {
+        "question": "摩擦力的大小与下列哪个因素无关？",
+        "answers": [
+            {"text": "接触面积", "correct": true},
+            {"text": "压力大小", "correct": false},
+            {"text": "接触面粗糙程度", "correct": false},
+            {"text": "物体的运动状态", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种能量转化是发电机的原理？",
+        "answers": [
+            {"text": "机械能转化为电能", "correct": true},
+            {"text": "电能转化为机械能", "correct": false},
+            {"text": "电能转化为热能", "correct": false},
+            {"text": "热能转化为电能", "correct": false}
+        ]
+    },
+    {
+        "question": "光的三原色是？",
+        "answers": [
+            {"text": "红、绿、蓝", "correct": true},
+            {"text": "红、黄、蓝", "correct": false},
+            {"text": "红、黄、绿", "correct": false},
+            {"text": "黄、绿、蓝", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种现象属于惯性现象？",
+        "answers": [
+            {"text": "刹车时人向前倾", "correct": true},
+            {"text": "苹果落地", "correct": false},
+            {"text": "水往低处流", "correct": false},
+            {"text": "磁铁吸引铁钉", "correct": false}
+        ]
+    },
+    {
+        "question": "热值的单位是？",
+        "answers": [
+            {"text": "焦/千克", "correct": true},
+            {"text": "焦/米³", "correct": false},
+            {"text": "瓦/千克", "correct": false},
+            {"text": "瓦/米³", "correct": false}
+        ]
+    },    
+    {
+        "question": "氧气的化学式是？",
+        "answers": [
+            {"text": "O₂", "correct": true},
+            {"text": "O", "correct": false},
+            {"text": "O₃", "correct": false},
+            {"text": "2O", "correct": false}
+        ]
+    },
+    {
+        "question": "二氧化碳的化学式是？",
+        "answers": [
+            {"text": "CO₂", "correct": true},
+            {"text": "CO", "correct": false},
+            {"text": "C₂O", "correct": false},
+            {"text": "C₂O₃", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种物质是酸？",
+        "answers": [
+            {"text": "盐酸", "correct": true},
+            {"text": "氢氧化钠", "correct": false},
+            {"text": "氯化钠", "correct": false},
+            {"text": "碳酸钠", "correct": false}
+        ]
+    },
+    {
+        "question": "金属活动性顺序中，排在氢前面的金属能与酸反应生成？",
+        "answers": [
+            {"text": "氢气", "correct": true},
+            {"text": "氧气", "correct": false},
+            {"text": "二氧化碳", "correct": false},
+            {"text": "氮气", "correct": false}
+        ]
+    },
+    {
+        "question": "水的相对分子质量是？",
+        "answers": [
+            {"text": "18", "correct": true},
+            {"text": "16", "correct": false},
+            {"text": "20", "correct": false},
+            {"text": "12", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种物质是碱？",
+        "answers": [
+            {"text": "氢氧化钙", "correct": true},
+            {"text": "硫酸", "correct": false},
+            {"text": "硝酸钾", "correct": false},
+            {"text": "氧化铜", "correct": false}
+        ]
+    },
+    {
+        "question": "化学变化的本质特征是？",
+        "answers": [
+            {"text": "有新物质生成", "correct": true},
+            {"text": "状态改变", "correct": false},
+            {"text": "颜色改变", "correct": false},
+            {"text": "放热", "correct": false}
+        ]
+    },
+    {
+        "question": "铁在氧气中燃烧生成的物质是？",
+        "answers": [
+            {"text": "四氧化三铁", "correct": true},
+            {"text": "氧化铁", "correct": false},
+            {"text": "氧化亚铁", "correct": false},
+            {"text": "氢氧化铁", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种元素是金属元素？",
+        "answers": [
+            {"text": "钠", "correct": true},
+            {"text": "碳", "correct": false},
+            {"text": "氧", "correct": false},
+            {"text": "氮", "correct": false}
+        ]
+    },
+    {
+        "question": "氯化钠的化学式是？",
+        "answers": [
+            {"text": "NaCl", "correct": true},
+            {"text": "Na₂Cl", "correct": false},
+            {"text": "NaCl₂", "correct": false},
+            {"text": "Na₂Cl₂", "correct": false}
+        ]
+    },
+    {
+        "question": "实验室制取氧气常用的药品不包括？",
+        "answers": [
+            {"text": "水", "correct": true},
+            {"text": "高锰酸钾", "correct": false},
+            {"text": "氯酸钾", "correct": false},
+            {"text": "过氧化氢", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种气体能使澄清石灰水变浑浊？",
+        "answers": [
+            {"text": "二氧化碳", "correct": true},
+            {"text": "氧气", "correct": false},
+            {"text": "氢气", "correct": false},
+            {"text": "氮气", "correct": false}
+        ]
+    },
+    {
+        "question": "原子的中心是？",
+        "answers": [
+            {"text": "原子核", "correct": true},
+            {"text": "电子", "correct": false},
+            {"text": "质子", "correct": false},
+            {"text": "中子", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种物质属于有机物？",
+        "answers": [
+            {"text": "甲烷", "correct": true},
+            {"text": "碳酸钙", "correct": false},
+            {"text": "二氧化碳", "correct": false},
+            {"text": "水", "correct": false}
+        ]
+    },
+    {
+        "question": "硫酸的化学式是？",
+        "answers": [
+            {"text": "H₂SO₄", "correct": true},
+            {"text": "HSO₄", "correct": false},
+            {"text": "H₂SO₃", "correct": false},
+            {"text": "H₂S", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种变化属于物理变化？",
+        "answers": [
+            {"text": "水蒸发", "correct": true},
+            {"text": "铁生锈", "correct": false},
+            {"text": "蜡烛燃烧", "correct": false},
+            {"text": "食物腐烂", "correct": false}
+        ]
+    },
+    {
+        "question": "氮气的化学式是？",
+        "answers": [
+            {"text": "N₂", "correct": true},
+            {"text": "N", "correct": false},
+            {"text": "N₃", "correct": false},
+            {"text": "2N", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种金属能与硫酸铜溶液发生置换反应？",
+        "answers": [
+            {"text": "铁", "correct": true},
+            {"text": "铜", "correct": false},
+            {"text": "银", "correct": false},
+            {"text": "金", "correct": false}
+        ]
+    },
+    {
+        "question": "氢氧化钠的化学式是？",
+        "answers": [
+            {"text": "NaOH", "correct": true},
+            {"text": "Na₂OH", "correct": false},
+            {"text": "Na(OH)₂", "correct": false},
+            {"text": "Na₂(OH)₂", "correct": false}
+        ]
+    },
+    {
+        "question": "元素周期表中有多少个主族？",
+        "answers": [
+            {"text": "7", "correct": true},
+            {"text": "8", "correct": false},
+            {"text": "6", "correct": false},
+            {"text": "9", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种物质是复合肥？",
+        "answers": [
+            {"text": "硝酸钾", "correct": true},
+            {"text": "尿素", "correct": false},
+            {"text": "氯化铵", "correct": false},
+            {"text": "磷酸钙", "correct": false}
+        ]
+    },
+    {
+        "question": "氢气在空气中燃烧的现象是？",
+        "answers": [
+            {"text": "产生淡蓝色火焰", "correct": true},
+            {"text": "产生蓝色火焰", "correct": false},
+            {"text": "产生黄色火焰", "correct": false},
+            {"text": "产生白烟", "correct": false}
+        ]
+    },
+    {
+        "question": "原子中质子数等于？",
+        "answers": [
+            {"text": "核外电子数", "correct": true},
+            {"text": "中子数", "correct": false},
+            {"text": "相对原子质量", "correct": false},
+            {"text": "原子序数的2倍", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种物质能使紫色石蕊试液变红？",
+        "answers": [
+            {"text": "稀盐酸", "correct": true},
+            {"text": "氢氧化钠溶液", "correct": false},
+            {"text": "氯化钠溶液", "correct": false},
+            {"text": "水", "correct": false}
+        ]
+    },
+    {
+        "question": "一氧化碳的化学式是？",
+        "answers": [
+            {"text": "CO", "correct": true},
+            {"text": "CO₂", "correct": false},
+            {"text": "C₂O", "correct": false},
+            {"text": "C₂O₃", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种物质属于盐？",
+        "answers": [
+            {"text": "碳酸钠", "correct": true},
+            {"text": "盐酸", "correct": false},
+            {"text": "氢氧化钾", "correct": false},
+            {"text": "氧化钙", "correct": false}
+        ]
+    },
+    {
+        "question": "实验室制取二氧化碳常用的药品是？",
+        "answers": [
+            {"text": "大理石和稀盐酸", "correct": true},
+            {"text": "大理石和稀硫酸", "correct": false},
+            {"text": "碳酸钠和稀盐酸", "correct": false},
+            {"text": "碳酸钙和稀硫酸", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种元素的符号是Fe？",
+        "answers": [
+            {"text": "铁", "correct": true},
+            {"text": "铜", "correct": false},
+            {"text": "锌", "correct": false},
+            {"text": "铝", "correct": false}
+        ]
+    },
+    {
+        "question": "硬水和软水的区别在于水中含有多少？",
+        "answers": [
+            {"text": "钙、镁离子", "correct": true},
+            {"text": "钠离子", "correct": false},
+            {"text": "氯离子", "correct": false},
+            {"text": "钾离子", "correct": false}
+        ]
+    },
+    {
+        "question": "化学反应前后，下列哪种粒子的种类不变？",
+        "answers": [
+            {"text": "原子", "correct": true},
+            {"text": "分子", "correct": false},
+            {"text": "离子", "correct": false},
+            {"text": "电子", "correct": false}
+        ]
+    },
+    {
+        "question": "植物进行光合作用的场所是？",
+        "answers": [
+            {"text": "叶绿体", "correct": true},
+            {"text": "线粒体", "correct": false},
+            {"text": "细胞核", "correct": false},
+            {"text": "细胞质", "correct": false}
+        ]
+    },
+    {
+        "question": "人体中最大的器官是？",
+        "answers": [
+            {"text": "皮肤", "correct": true},
+            {"text": "肝脏", "correct": false},
+            {"text": "心脏", "correct": false},
+            {"text": "肺", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种生物属于生产者？",
+        "answers": [
+            {"text": "绿色植物", "correct": true},
+            {"text": "动物", "correct": false},
+            {"text": "细菌", "correct": false},
+            {"text": "真菌", "correct": false}
+        ]
+    },
+    {
+        "question": "人体消化系统中，消化和吸收的主要场所是？",
+        "answers": [
+            {"text": "小肠", "correct": true},
+            {"text": "胃", "correct": false},
+            {"text": "大肠", "correct": false},
+            {"text": "口腔", "correct": false}
+        ]
+    },
+    {
+        "question": "细胞的基本结构不包括？",
+        "answers": [
+            {"text": "细胞壁（动物细胞）", "correct": true},
+            {"text": "细胞膜", "correct": false},
+            {"text": "细胞质", "correct": false},
+            {"text": "细胞核", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种气体是植物光合作用的产物？",
+        "answers": [
+            {"text": "氧气", "correct": true},
+            {"text": "二氧化碳", "correct": false},
+            {"text": "氮气", "correct": false},
+            {"text": "氢气", "correct": false}
+        ]
+    },
+    {
+        "question": "人体中红细胞的主要功能是？",
+        "answers": [
+            {"text": "运输氧气", "correct": true},
+            {"text": "防御病菌", "correct": false},
+            {"text": "止血凝血", "correct": false},
+            {"text": "运输营养物质", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种生物属于单细胞生物？",
+        "answers": [
+            {"text": "草履虫", "correct": true},
+            {"text": "蚯蚓", "correct": false},
+            {"text": "蝗虫", "correct": false},
+            {"text": "青蛙", "correct": false}
+        ]
+    },
+    {
+        "question": "植物的根吸收水分和无机盐的主要部位是？",
+        "answers": [
+            {"text": "成熟区", "correct": true},
+            {"text": "伸长区", "correct": false},
+            {"text": "分生区", "correct": false},
+            {"text": "根冠", "correct": false}
+        ]
+    },
+    {
+        "question": "人体的呼吸系统中，气体交换的主要场所是？",
+        "answers": [
+            {"text": "肺", "correct": true},
+            {"text": "气管", "correct": false},
+            {"text": "支气管", "correct": false},
+            {"text": "鼻腔", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种激素能促进植物生长？",
+        "answers": [
+            {"text": "生长素", "correct": true},
+            {"text": "脱落酸", "correct": false},
+            {"text": "乙烯", "correct": false},
+            {"text": "细胞分裂素", "correct": false}
+        ]
+    },
+    {
+        "question": "人体中，神经系统的最高级中枢是？",
+        "answers": [
+            {"text": "大脑皮层", "correct": true},
+            {"text": "小脑", "correct": false},
+            {"text": "脑干", "correct": false},
+            {"text": "脊髓", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种生物属于消费者？",
+        "answers": [
+            {"text": "兔子", "correct": true},
+            {"text": "蘑菇", "correct": false},
+            {"text": "小麦", "correct": false},
+            {"text": "蓝藻", "correct": false}
+        ]
+    },
+    {
+        "question": "植物进行呼吸作用的主要场所是？",
+        "answers": [
+            {"text": "线粒体", "correct": true},
+            {"text": "叶绿体", "correct": false},
+            {"text": "细胞核", "correct": false},
+            {"text": "液泡", "correct": false}
+        ]
+    },
+    {
+        "question": "人体中，形成尿液的器官是？",
+        "answers": [
+            {"text": "肾脏", "correct": true},
+            {"text": "输尿管", "correct": false},
+            {"text": "膀胱", "correct": false},
+            {"text": "尿道", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种属于裸子植物？",
+        "answers": [
+            {"text": "松树", "correct": true},
+            {"text": "桃树", "correct": false},
+            {"text": "苹果树", "correct": false},
+            {"text": "梨树", "correct": false}
+        ]
+    },
+    {
+        "question": "人体的血液循环中，体循环的起点是？",
+        "answers": [
+            {"text": "左心室", "correct": true},
+            {"text": "右心室", "correct": false},
+            {"text": "左心房", "correct": false},
+            {"text": "右心房", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种生物属于分解者？",
+        "answers": [
+            {"text": "腐生细菌", "correct": true},
+            {"text": "草", "correct": false},
+            {"text": "羊", "correct": false},
+            {"text": "狼", "correct": false}
+        ]
+    },
+    {
+        "question": "植物的叶肉细胞中，含有大量的？",
+        "answers": [
+            {"text": "叶绿体", "correct": true},
+            {"text": "线粒体", "correct": false},
+            {"text": "液泡", "correct": false},
+            {"text": "细胞核", "correct": false}
+        ]
+    },
+    {
+        "question": "人体中，调节血糖浓度的激素主要是？",
+        "answers": [
+            {"text": "胰岛素", "correct": true},
+            {"text": "生长激素", "correct": false},
+            {"text": "甲状腺激素", "correct": false},
+            {"text": "肾上腺素", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种动物属于恒温动物？",
+        "answers": [
+            {"text": "鸟类", "correct": true},
+            {"text": "鱼类", "correct": false},
+            {"text": "两栖类", "correct": false},
+            {"text": "爬行类", "correct": false}
+        ]
+    },
+    {
+        "question": "植物的种子中，能发育成新植株的是？",
+        "answers": [
+            {"text": "胚", "correct": true},
+            {"text": "胚乳", "correct": false},
+            {"text": "种皮", "correct": false},
+            {"text": "子叶", "correct": false}
+        ]
+    },
+    {
+        "question": "人体中，骨的基本结构不包括？",
+        "answers": [
+            {"text": "骨髓腔", "correct": false},
+            {"text": "骨质", "correct": false},
+            {"text": "骨膜", "correct": false},
+            {"text": "骨松质（属于骨质）", "correct": true}
+        ]
+    },
+    {
+        "question": "下列哪种属于被子植物？",
+        "answers": [
+            {"text": "水稻", "correct": true},
+            {"text": "银杏", "correct": false},
+            {"text": "苏铁", "correct": false},
+            {"text": "红豆杉", "correct": false}
+        ]
+    },
+    {
+        "question": "人体的免疫系统中，能产生抗体的细胞是？",
+        "answers": [
+            {"text": "淋巴细胞", "correct": true},
+            {"text": "红细胞", "correct": false},
+            {"text": "白细胞", "correct": false},
+            {"text": "血小板", "correct": false}
+        ]
+    },
+    {
+        "question": "植物的茎中，运输水分和无机盐的结构是？",
+        "answers": [
+            {"text": "导管", "correct": true},
+            {"text": "筛管", "correct": false},
+            {"text": "形成层", "correct": false},
+            {"text": "韧皮部", "correct": false}
+        ]
+    },
+    {
+        "question": "人体中，消化系统的起始部位是？",
+        "answers": [
+            {"text": "口腔", "correct": true},
+            {"text": "咽", "correct": false},
+            {"text": "食道", "correct": false},
+            {"text": "胃", "correct": false}
+        ]
+    },
+    {
+        "question": "下列哪种动物属于无脊椎动物？",
+        "answers": [
+            {"text": "蚯蚓", "correct": true},
+            {"text": "鱼", "correct": false},
+            {"text": "鸟", "correct": false},
+            {"text": "兔", "correct": false}
+        ]
+    },
+    {
+        "question": "植物的光合作用需要的原料是？",
+        "answers": [
+            {"text": "二氧化碳和水", "correct": true},
+            {"text": "氧气和水", "correct": false},
+            {"text": "二氧化碳和氧气", "correct": false},
+            {"text": "有机物和氧气", "correct": false}
+        ]
+    },
+    {
+        "question": "人体中，心脏的四个腔中，哪个腔的壁最厚？",
+        "answers": [
+            {"text": "左心室", "correct": true},
+            {"text": "右心室", "correct": false},
+            {"text": "左心房", "correct": false},
+            {"text": "右心房", "correct": false}
+        ]
+    },    
+    {
+        "question": "世界上面积最大的国家是？",
+        "answers": [
+            {"text": "俄罗斯", "correct": true},
+            {"text": "中国", "correct": false},
+            {"text": "美国", "correct": false},
+            {"text": "加拿大", "correct": false}
+        ]
+    },
+    {
+        "question": "世界上最高的山峰是？",
+        "answers": [
+            {"text": "珠穆朗玛峰", "correct": true},
+            {"text": "乔戈里峰", "correct": false},
+            {"text": "干城章嘉峰", "correct": false},
+            {"text": "洛子峰", "correct": false}
+        ]
+    },
+    {
+        "question": "中国的国旗是？",
+        "answers": [
+            {"text": "五星红旗", "correct": true},
+            {"text": "星条旗", "correct": false},
+            {"text": "米字旗", "correct": false},
+            {"text": "枫叶旗", "correct": false}
+        ]
+    },
+    {
+        "question": "一年有多少个节气？",
+        "answers": [
+            {"text": "24", "correct": true},
+            {"text": "12", "correct": false},
+            {"text": "36", "correct": false},
+            {"text": "8", "correct": false}
+        ]
+    },
+    {
+        "question": "世界上最大的海洋是？",
+        "answers": [
+            {"text": "太平洋", "correct": true},
+            {"text": "大西洋", "correct": false},
+            {"text": "印度洋", "correct": false},
+            {"text": "北冰洋", "correct": false}
+        ]
+    },
+    {
+        "question": "中国的人口数量约为多少（2025年）？",
+        "answers": [
+            {"text": "14亿多", "correct": true},
+            {"text": "13亿多", "correct": false},
+            {"text": "15亿多", "correct": false},
+            {"text": "12亿多", "correct": false}
+        ]
+    },
+    {
+        "question": "奥运会每几年举办一次？",
+        "answers": [
+            {"text": "4", "correct": true},
+            {"text": "2", "correct": false},
+            {"text": "3", "correct": false},
+            {"text": "5", "correct": false}
+        ]
+    }
+]

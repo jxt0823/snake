@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>贪吃喵大冒险--开始界面</title>
+        <link rel="stylesheet" href="../css/start.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="start-container">
+
+            <div class="header-section">
+                <h1>贪吃喵大冒险</h1>
+                <img src="../assets/start.png" alt="贪吃喵大冒险">
+            </div>
+            
+            <!-- 游戏模式区域 -->
+            <div class="game-modes-section">
+                <h2 class="section-title">选择游戏模式</h2>
+                <div class="game-modes">
+                    <!-- 限时模式 -->
+                    <div class="mode-card" data-mode="time" id="timeMode">
+                        <div class="mode-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="mode-name">限时模式</h3>
+                        
+                        <!-- 时间选项 - 初始隐藏 -->
+                        <div class="time-options">
+                            <div class="time-option" data-time="60">
+                                <i class="fas fa-hourglass-start"></i> 1分钟挑战
+                            </div>
+                            <div class="time-option" data-time="180">
+                                <i class="fas fa-hourglass-half"></i> 3分钟挑战
+                            </div>
+                            <div class="time-option" data-time="300">
+                                <i class="fas fa-hourglass-end"></i> 5分钟挑战
+                            </div>
+                        </div>
+                        
+                        <button class="start-btn">
+                            点击选择时间
+                        </button>
+                    </div>
+                    
+                    <!-- 无限模式 -->
+                    <div class="mode-card" data-mode="infinite" id="infiniteMode">
+                        <div class="mode-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3 class="mode-name">无限模式</h3>
+                        <button class="start-btn">
+                            <i class="fas fa-play-circle"></i> 开始游戏
+                        </button>
+                    </div>
+                    
+                    <!-- 人机模式 -->
+                    <div class="mode-card" data-mode="ai" id="aiMode">
+                        <div class="mode-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="mode-name">人机对战</h3>
+                        <button class="start-btn">
+                            <i class="fas fa-play-circle"></i> 开始游戏
+                        </button>
+                    </div>
+                    
+                    <!-- 联机模式 -->
+                    <div class="mode-card" data-mode="online" id="onlineMode">
+                        <div class="mode-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3 class="mode-name">联机模式</h3>
+                        <button class="start-btn">
+                            <i class="fas fa-play-circle"></i> 开始游戏
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 底部选项区域 -->
+            <div class="bottom-options-section">
+                <div class="bottom-options">
+                    <!-- 猫咪选择 -->
+                    <div class="bottom-option" id="chooseCatOption">
+                        <div class="option-icon">
+                            <i class="fas fa-cat"></i>
+                        </div>
+                        <h3 class="option-name">猫咪选择</h3>
+                    </div>
+                    
+                    <!-- 游戏说明 -->
+                    <div class="bottom-option" id="instructionsOption">
+                        <div class="option-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3 class="option-name">游戏说明</h3>
+                    </div>
+                    
+                    <!-- 设置 -->
+                    <div class="bottom-option" id="settingsOption">
+                        <div class="option-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h3 class="option-name">设置</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/start.js"></script>
+    </body>
+</html>
