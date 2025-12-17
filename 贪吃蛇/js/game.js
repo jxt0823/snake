@@ -590,10 +590,14 @@ document.addEventListener('DOMContentLoaded', function() {
         cameraLerpFactor: 0.2, // 插值系数（越大越灵敏，0.2→0.5提升响应）
         cameraDeadZone: 20,// 相机死区（像素，蛇头偏离中心超过此值才移动）
         maxCameraSpeed: 50,
+        isInvincible: false,
+        invincibleEndTime: 0
     };
 //游戏前准备
     //初始化游戏
     function initGame() {
+        game.isInvincible = false;
+        game.invicibleEndTime = 0;
         //获取画布和上下文
         game.canvas = document.getElementById('gameCanvas');
         game.ctx = game.canvas.getContext('2d');
@@ -2253,7 +2257,10 @@ function setupEventListeners() {
         game.isPaused = false;
         game.isGameOver = false;
         game.lastUpdateTime = Date.now();
-        // 隐藏开始提示
+        // 添加初始无敌状态
+        game.isInvincible = true;
+        game.invincibleEndTime = Date.now() + 5000; // 5秒后结束
+     // 隐藏开始提示
         document.getElementById('gameStartTip').style.display = 'none';
         // 更新按钮状态
         document.getElementById('start-btn').disabled = true;
@@ -2362,6 +2369,10 @@ function setupEventListeners() {
         // 更新游戏时间
         game.elapsedTime += deltaTime;
         // 检查限时模式
+         if (game.isInvincible && currentTime > game.invincibleEndTime) {
+              game.isInvincible = false;
+        //showTemporaryMessage("无敌状态结束！", "warning");
+        }
         if (game.selectedMode === 'time') {
             const remainingTime = game.selectedTime * 1000 - game.elapsedTime;
             if (remainingTime <= 0) {
@@ -2598,6 +2609,10 @@ if (game.selectedMode === 'ai') {
     // 处理碰撞（复活弹窗逻辑）
     function handleCollision() {
         // 检查复活条件
+        // 如果处于无敌状态，不处理碰撞
+        if (game.isInvincible) {
+         return;
+        }
         if (game.catProperties.revive && game.catProperties.reviveCount > 0 && !game.reviveUsed) {
             game.isPaused = true;
             // 显示复活弹窗
@@ -2624,9 +2639,10 @@ if (game.selectedMode === 'ai') {
         // 重置方向防止再次碰撞
         game.direction = {x: 0, y: 0};
         game.nextDirection = {x: 0, y: 0};
-        
+        game.isInvincible = true;
+        game.invincibleEndTime = Date.now() + 5000;
         // 复活提示
-        showTemporaryMessage("复活成功！", "success");
+        showTemporaryMessage("复活成功！5秒内无敌！", "success");
         
         // 恢复游戏状态
         game.isPaused = false;
